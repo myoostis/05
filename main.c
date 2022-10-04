@@ -5,18 +5,26 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum = 0;
-	int x;
-	int i;
+	int x,y ;
+	char op;
+	int result;
 	
-	printf("정수를 입력하시오 : ");
-	scanf("%d", &x);
+	printf("enter the calculation : ");
+	scanf("%d %c %d", &x, &op, &y);
 	
-	for(i=0; i<=x; i++){
-		sum = sum + i ;
+	if(op == '+'){
+		result = x + y;	
 	}
-	
-	printf("더하기 결과는 %i입니다. \n", sum);
-	return 0 ;
+	else if(op == '-'){
+		result = x - y;	
+	}
+	else if(op == '*'){
+		result = x * y;	
+	}
+	else{
+		result = x / y;	
+	}
+	printf("= %i\n", result);	
+	return 0;
 }
 
