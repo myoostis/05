@@ -5,26 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x,y ;
-	char op;
-	int result;
+	int answer = 59;
+	int x;
+	int trials = 0;
 	
-	printf("enter the calculation : ");
-	scanf("%d %c %d", &x, &op, &y);
+	do
+	{
+		printf("Guess a number : ");
+		scanf("%d", &x);
+		trials = trials + 1;
+		if(x>answer){
+			printf("high!\n");
+		}
+		if(x<answer){
+			printf("low!\n");
+		}
+		 
+	}
+	while (x != answer);
 	
-	if(op == '+'){
-		result = x + y;	
-	}
-	else if(op == '-'){
-		result = x - y;	
-	}
-	else if(op == '*'){
-		result = x * y;	
-	}
-	else{
-		result = x / y;	
-	}
-	printf("= %i\n", result);	
-	return 0;
+	printf("Number of trials = %i\n", trials);
+	
+	return 0 ;
 }
 
