@@ -5,17 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	char c;
-	int num = 0 ;
+	int sum = 0;
+	int x;
+	int i;
 	
-	printf("문자열을 입력하세요. : ");
-	while ((c=getchar()) != '\n')
-	{
-	  if( c >='0' && c <= '9'){
-	  	num = num + 1;
-	  }
+	printf("정수를 입력하시오 : ");
+	scanf("%d", &x);
+	
+	for(i=0; i<=x; i++){
+		sum = sum + i ;
 	}
 	
-	printf("숫자의 개수는 %i개 입니다.\n", num);
-	
+	printf("더하기 결과는 %i입니다. \n", sum);
+	return 0 ;
 }
+
